@@ -26,7 +26,15 @@ public class Personne {
 		this.prenom = prenom;
 		this.films = films;
 	}
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return String.format("Personne [nom=%s, prenom=%s, films=%s]", nom, prenom, films);
+	}
 
+	
 	
 	 
 }

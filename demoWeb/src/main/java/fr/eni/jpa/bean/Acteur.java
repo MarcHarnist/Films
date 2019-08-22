@@ -22,6 +22,15 @@ public class Acteur extends Personne {
 		// TODO Auto-generated constructor stub
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return String.format("Acteur [toString()=%s, getClass()=%s, hashCode()=%s]", super.toString(), getClass(),
+				hashCode());
+	}
+
 	
 	
 	
