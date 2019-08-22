@@ -65,7 +65,8 @@ public class Film {
 		setAnnee(annee);
 		setStyle(style);
 		setRealisateur(realisateur);
-		setDuree(duree);
+		setHeure(heure);
+		setMinutes(minutes);
 		setVu(vu);
 		setSynopsis(synopsis);
 		this.acteurs = new String[4]; //Cinq acteurs possibles par film
