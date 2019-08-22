@@ -1,4 +1,4 @@
-#TP Java Hibernate
+# TP Java Hibernate
 
-###Installation
+### Installation
 Après le téléchargement du projet: rafraîchir Gradle: Projet/gradle/refresh gradle, pour importer les librairies Hibernate...
