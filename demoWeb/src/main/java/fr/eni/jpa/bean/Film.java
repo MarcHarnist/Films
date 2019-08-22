@@ -10,9 +10,39 @@ public class Film {
 	private Date annee;
 	private String style;
 	private String realisateur;
-	private String duree;
+	private int heure;
+	private int minutes;
 	private String vu;
 	private String[] acteurs;
+	private String synopsis;
+	
+	/**
+	 * @return the heure
+	 */
+	public int getHeure() {
+		return heure;
+	}
+
+	/**
+	 * @param heure the heure to set
+	 */
+	public void setHeure(int heure) {
+		this.heure = heure;
+	}
+
+	/**
+	 * @return the minutes
+	 */
+	public int getMinutes() {
+		return minutes;
+	}
+
+	/**
+	 * @param minutes the minutes to set
+	 */
+	public void setMinutes(int minutes) {
+		this.minutes = minutes;
+	}
 
 	//#### Constructeurs ####
 	/** Constructeur vide **/
@@ -30,13 +60,14 @@ public class Film {
 	 * @param vu le film a-t-il été vu?
 	 * @param acteurs du film
 	 */
-	public Film(String titre, Date annee, String style, String realisateur, String duree, String vu, String[] acteurs) {
+	public Film(String titre, Date annee, String style, String realisateur, String duree, String vu, String[] acteurs, String synopsis) {
 		setTitre(titre);
 		setAnnee(annee);
 		setStyle(style);
 		setRealisateur(realisateur);
 		setDuree(duree);
 		setVu(vu);
+		setSynopsis(synopsis);
 		this.acteurs = new String[4]; //Cinq acteurs possibles par film
 	}
 
@@ -113,20 +144,6 @@ public class Film {
 	}
 
 	/**
-	 * @return the duree
-	 */
-	public String getDuree() {
-		return duree;
-	}
-
-	/**
-	 * @param duree the duree to set
-	 */
-	public void setDuree(String duree) {
-		this.duree = duree;
-	}
-
-	/**
 	 * @return the vu
 	 */
 	public String getVu() {
@@ -154,15 +171,20 @@ public class Film {
 		this.acteurs = acteurs;
 	}
 
+	public String getSynopsis() {
+		return synopsis;
+	}
+
+	public void setSynopsis(String synopsis) {
+		this.synopsis = synopsis;
+	}
 	/** Méthode toString() personnalisée
 	 * @see java.lang.Object#toString()
 	 */
 	@Override
 	public String toString() {
-		return String.format("Film [titre=%s, annee=%s, style=%s, realisateur=%s, duree=%s, vu=%s, acteurs=%s]", titre,
-				annee, style, realisateur, duree, vu, Arrays.toString(acteurs));
+		return String.format(
+				"Film [titre=%s, annee=%s, style=%s, realisateur=%s, durée: %s:%s, vu=%s, acteurs=%s, synopsis=%s]",
+				titre, annee, style, realisateur, heure, minutes, vu, Arrays.toString(acteurs), synopsis);
 	}
-	
-	
-
 }
