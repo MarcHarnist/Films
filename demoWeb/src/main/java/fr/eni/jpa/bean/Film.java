@@ -27,8 +27,8 @@ public class Film {
 	//CORRECTION
 	/*
 	 *
-	@Id   //l'id est la clé primaire
-	@GeneratedValue(strategy=GenerationType.IDENTITY) // la db organise la création de la clé primaire
+	@Id   //l'id est la clÃ© primaire
+	@GeneratedValue(strategy=GenerationType.IDENTITY) // la db organise la crÃ©ation de la clÃ© primaire
 	private int id;
 	private String titre;
 	private int annee;
@@ -43,7 +43,7 @@ public class Film {
 	
 	private boolean vu;
 	
-	@Lob
+	@Lob //sql column type "text"
 	@Column(name="syno")
 	private String synopsis;
 	
@@ -88,7 +88,7 @@ public class Film {
 				titre, annee, style, realisateur, heure, minutes, vu, acteur1, synopsis);
 	}
 
-	/** Méthode toString() personnalisée
+	/** MÃ©thode toString() personnalisÃ©e
 	 * @see java.lang.Object#toString()
 	 */
 
