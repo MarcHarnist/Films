@@ -46,8 +46,6 @@ public class AjouterServlet extends HttpServlet {
 		String acteur1 = request.getParameter("acteur1");
 		String synopsis = request.getParameter("synopsis");
 		
-
-		
 		Film film = new Film(titre, annee, style, realisateur, heure, minutes, vu, acteur1, synopsis);
 		System.out.print("Objet film: " ); System.out.println(film);
 		

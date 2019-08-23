@@ -2,6 +2,7 @@ package fr.eni.jpa.bean;
 
 import java.sql.Date;
 import java.util.Arrays;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -22,6 +23,31 @@ public class Film {
 	private String vu;
 	private String acteur1;
 	private String synopsis;
+	
+	//CORRECTION
+	/*
+	 *
+	@Id   //l'id est la clé primaire
+	@GeneratedValue(strategy=GenerationType.IDENTITY) // la db organise la création de la clé primaire
+	private int id;
+	private String titre;
+	private int annee;
+	
+	@ManyToOne
+	private Style style;
+	@OneToOne(cascade=CascadeType.ALL, orphanRemoval=true)
+	private Realisateur real;
+	private String duree;
+	@OneToMany(cascade=CascadeType.ALL, fetch=FetchType.EAGER)
+	private List<Acteur> acteurs;
+	
+	private boolean vu;
+	
+	@Lob
+	@Column(name="syno")
+	private String synopsis;
+	
+	 */
 	
 	//#### Constructeurs ####
 	public Film() {
