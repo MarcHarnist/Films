@@ -43,10 +43,12 @@ public class AjouterServlet extends HttpServlet {
 		String heure = request.getParameter("heure");
 		String minutes = request.getParameter("minutes");
 		String vu = request.getParameter("vu");
-		String synopsis = request.getParameter("synopsis");
 		String acteur1 = request.getParameter("acteur1");
+		String synopsis = request.getParameter("synopsis");
 		
-		Film film = new Film(titre, annee, style, realisateur, heure, minutes, vu, synopsis, acteur1);
+
+		
+		Film film = new Film(titre, annee, style, realisateur, heure, minutes, vu, acteur1, synopsis);
 		System.out.print("Objet film: " ); System.out.println(film);
 		
 		try {
