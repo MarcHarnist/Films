@@ -11,7 +11,8 @@
 		<class>fr.eni.jpa.bean.Style</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/frameworks"/>
+			<!--  ATTENTION au nom de la base de donnée. Ici: "films" -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/films"/>
 			<property name="javax.persistence.jdbc.user" value="root"/>
 			<property name="javax.persistence.jdbc.password" value=""/>
 			<property name="hibernate.show_sql" value="true"/>
