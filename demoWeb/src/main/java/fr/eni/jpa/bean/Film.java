@@ -3,11 +3,18 @@ package fr.eni.jpa.bean;
 import java.sql.Date;
 import java.util.Arrays;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Film")
 public class Film {
 	
+	@Id
 	//Attributs de classe
 	private String titre;
-	private Date annee;
+	private int annee;
 	private String style;
 	private String realisateur;
 	private int heure;
@@ -16,33 +23,11 @@ public class Film {
 	private String[] acteurs;
 	private String synopsis;
 	
-	/**
-	 * @return the heure
-	 */
-	public int getHeure() {
-		return heure;
-	}
-
-	/**
-	 * @param heure the heure to set
-	 */
-	public void setHeure(int heure) {
-		this.heure = heure;
-	}
-
-	/**
-	 * @return the minutes
-	 */
-	public int getMinutes() {
-		return minutes;
-	}
-
-	/**
-	 * @param minutes the minutes to set
-	 */
-	public void setMinutes(int minutes) {
-		this.minutes = minutes;
-	}
+	//Trois string provisoires pour tester le formulaire ajouterFilm
+	private String annee2;
+	private String heure2;
+	private String minutes2;
+	private String acteur1;
 
 	//#### Constructeurs ####
 	/** Constructeur vide **/
@@ -60,7 +45,7 @@ public class Film {
 	 * @param vu le film a-t-il été vu?
 	 * @param acteurs du film
 	 */
-	public Film(String titre, Date annee, String style, String realisateur, String duree, String vu, String[] acteurs, String synopsis) {
+	public Film(String titre, int annee, String style, String realisateur, String duree, String vu, String[] acteurs, String synopsis) {
 		setTitre(titre);
 		setAnnee(annee);
 		setStyle(style);
@@ -70,6 +55,36 @@ public class Film {
 		setVu(vu);
 		setSynopsis(synopsis);
 		this.acteurs = new String[4]; //Cinq acteurs possibles par film
+	}
+
+	public Film(String titre2, String annee2, String style2, String realisateur2, String heure2, String minutes2,
+			String vu2, String synopsis2, String acteur1) {
+		setTitre(titre2);
+		setAnnee2(annee2);
+		setStyle(style2);
+		setRealisateur(realisateur2);
+		setHeure2(heure2);
+		setMinutes2(minutes2);
+		setVu(vu2);
+		setSynopsis(synopsis2);
+		this.acteurs = new String[4]; //Cinq acteurs possibles par film	
+	
+	
+	}
+
+	private void setMinutes2(String minutes2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void setHeure2(String heure2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void setAnnee2(String annee2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 	/** Méthode pour ajouter un acteur au tableau "acteurs" de l'objet film
@@ -105,14 +120,14 @@ public class Film {
 	/**
 	 * @return the annee
 	 */
-	public Date getAnnee() {
+	public int getAnnee() {
 		return annee;
 	}
 
 	/**
 	 * @param annee the annee to set
 	 */
-	public void setAnnee(Date annee) {
+	public void setAnnee(int annee) {
 		this.annee = annee;
 	}
 
@@ -179,6 +194,67 @@ public class Film {
 	public void setSynopsis(String synopsis) {
 		this.synopsis = synopsis;
 	}
+
+
+	/**
+	 * @return the annee2
+	 */
+	public String getAnnee2() {
+		return annee2;
+	}
+
+	/**
+	 * @return the heure2
+	 */
+	public String getHeure2() {
+		return heure2;
+	}
+
+	/**
+	 * @return the minutes2
+	 */
+	public String getMinutes2() {
+		return minutes2;
+	}
+	
+	
+	/**
+	 * @return the heure
+	 */
+	public int getHeure() {
+		return heure;
+	}
+
+	/**
+	 * @param heure the heure to set
+	 */
+	public void setHeure(int heure) {
+		this.heure = heure;
+	}
+
+	/**
+	 * @return the minutes
+	 */
+	public int getMinutes() {
+		return minutes;
+	}
+
+	/**
+	 * @param minutes the minutes to set
+	 */
+	public void setMinutes(int minutes) {
+		this.minutes = minutes;
+	}
+
+	
+	public String getActeur1() {
+		return acteur1;
+	}
+
+	public void setActeur1(String acteur1) {
+		this.acteur1 = acteur1;
+	}
+
 	/** Méthode toString() personnalisée
 	 * @see java.lang.Object#toString()
 	 */
